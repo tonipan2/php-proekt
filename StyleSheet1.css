@@ -1,0 +1,345 @@
+﻿.body {
+    display: flex;
+}
+
+@font-face {
+    font-family: Handy Casual;
+    src: url("HandyCasualCondensed-Regular.otf") format("opentype");
+}
+
+/*тук пишем за търсачката*/
+.input {
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: 4px solid #53bb0b;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 26px;
+    font-family: Handy Casual;
+    outline: none;
+    transition: .5s;
+    
+}
+
+
+
+.box {
+    position: relative;
+}
+
+    .box:hover input {
+        width: 350px;
+        
+        border-radius: 10px;
+    }
+
+
+    .box i {
+        position: absolute;
+        top: 40%;
+        right: 15px;
+        transform: translate(-50%,-50%);
+        font-size: 26px;
+        color: #53bb0b;
+        transition: .2s;
+    }
+
+.box:hover i {
+    opacity: 0;
+    z-index: -1;
+}
+
+/*край на търсачката*/
+
+/*ZAPOCHVAME OT HEADER-A*/
+div.header {
+    display: flex;
+    justify-content:space-between;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    font-family: Handy Casual;
+    padding-bottom: 0;
+    
+}
+
+
+div.logo {
+    margin: auto;
+   
+    max-width: 100%;
+    padding: 0px;
+    background-color: white;
+}
+
+#logo {
+    height: 75px;
+    width: 450px;
+    margin:0px;
+
+}
+
+ /* Style the links inside the navigation bar */
+.header a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 20px;
+}
+
+/* Change the color of links on hover */
+.links a:hover {
+    background-color: #e1fcbb;
+    color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.header a.active {
+    background-color: #53bb0b;
+    color: white;
+ 
+    border-radius: 20px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    #logo {
+        height: 50px;
+        width: 300px;
+        margin: 0px;
+    }
+
+    .header input[type=text] {
+        float: left;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    #logo {
+        height: 25px;
+        width: 150px;
+        margin: 0px;
+    }
+    .header input[type=text] {
+        float:left;
+
+    }
+
+}
+
+
+
+    /* Left and right column */
+.column.left {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    font-family: Handy Casual;
+    font-size: 20px;
+    top: 2em;
+    width: 15%;
+    float: left;
+    padding: 30px;
+}
+
+    /* Middle column */
+.column.middle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:space-between;
+    font-family: Handy Casual;
+    width: 75%;
+    float: right;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 880px) {
+
+    .row{
+        display:flex;
+        flex-direction:column;
+        
+    }
+
+    .column.left {
+        display:flex;
+        width: 100%;
+        margin-bottom: 10px;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        order:2;
+    }
+
+        .column.left + #content {
+            padding-left: 0;
+        }
+
+    .column.middle {
+        display:flex;
+        width: 100%;
+        margin-bottom: 10px;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        order: 1;
+    }
+
+        .column.middle + #content {
+            padding-left: 0;
+        }
+
+        .bestsellers
+        {
+            width:40%;
+        }
+        
+}
+
+
+
+
+
+.book img {
+   width: 90%;
+   
+}
+
+.book{
+    
+    width:20%;
+    text-align:center;
+    padding:10px;
+    margin:10px;
+  
+    
+}
+
+.book p{
+    font-size:20px;
+    text-align:center;
+}
+
+.bestsellers img{
+    width: 100%;
+}
+
+.side-cover{
+    width:35%;
+}
+
+.name {
+    width: 42%;
+}
+
+.clearfix {
+    clear: both
+}
+
+.bestsellers{
+    display:flex;
+    flex-direction:row;
+    padding:10px;
+    justify-content:space-around;
+}
+
+    .bestsellers p {
+        font-size: 20px;
+        text-align: left;
+    }
+
+.cover{
+    width:100%;
+}
+
+.title{
+    padding:0;
+}
+
+.about {
+    font-family: Handy Casual;
+    font-size: 20px;
+    padding-top:30px;
+}
+
+.book:hover, .bestsellers:hover {
+    background-color: #e1fcbb;
+   
+    box-shadow: 0 3px 2px rgb(0 0 0 / 15%), 0 0 1px rgb(0 0 0 / 15%);
+    border-radius: 20px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #53bb0b;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-family: Handy Casual;
+    
+}
+
+    #myBtn:hover {
+        background-color: #e1fcbb;
+    }
+
+.footer {
+    width:100%;
+    text-align:center;
+    padding:30px 0;
+    font-family:Handy Casual;
+}
+
+.footer h4 {
+    margin-bottom:25px;
+}
+
+.icons .fa {
+    color: #53bb0b;
+    margin: 0 13px;
+    cursor:pointer;
+    padding:18px 0;
+
+}
+
+.hide{
+    display: none;
+}
+
+.user:hover + .hide{
+    display: block;
+}
+
+
+
